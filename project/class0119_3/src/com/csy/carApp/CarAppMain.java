@@ -1,0 +1,61 @@
+package com.csy.carApp;
+
+import java.util.Random;
+
+import com.csy.carApp.car.Car;
+import com.csy.carApp.customer.Customer;
+
+public class CarAppMain {
+	//싱글톤 개념으로 변경
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name[] = { "홍길동", "박길동", "이길동", "최길동", "김길동" };
+		String tel[] = { "010-1234-5678", "010-4321-5678", "010-3478-1278", "010-4523-1978", "010-7890-2134" };
+		String address[] = { "대구시 동구 신암4동", "서울시 동구 신암4동", "부산시 동구 신암4동", "인천시 동구 신암4동", "광주시 동구 신암4동" };
+		String model[] = { "SM6", "소나타", "산타페", "K7", "그랜저" };
+		String color[] = { "블랙", "은색", "흰색", "회색", "빨강" };
+		int year[] = { 2021, 2020, 2019, 2018, 2017 };
+		String company[] = { "르노삼성", "현대", "기아", "쌍용", "GM" };
+		String price[] = { "2천오백만원", "3천만원", "3천오백만원", "4천만원", "4천오백만원" };
+
+		
+		System.out.println("-----------------------");
+		System.out.println("인스턴스 객체 생성");
+		System.out.println("-----------------------");
+		Random r = new Random();
+		for (int i = 0; i < 5; i++) {
+			System.out.println("번호 : " + (i+1));
+			new Customer(name[r.nextInt(5)], 
+						tel[r.nextInt(5)], 
+						address[r.nextInt(5)],					
+					new Car(model[r.nextInt(5)], 
+						year[r.nextInt(5)], 
+						color[r.nextInt(5)], 
+						company[r.nextInt(5)],
+						price[r.nextInt(5)]))
+			.printCustomerInfo();
+		}
+		
+		System.out.println("-----------------------");
+		System.out.println("싱글톤 객체 생성");
+		System.out.println("-----------------------");
+		for (int i = 0; i < 5; i++) {
+			Customer.getInstance(name[r.nextInt(5)],
+					tel[r.nextInt(5)], 
+					address[r.nextInt(5)],					
+				new Car(model[r.nextInt(5)], 
+					year[r.nextInt(5)], 
+					color[r.nextInt(5)], 
+					company[r.nextInt(5)],
+					price[r.nextInt(5)])).printCustomerInfo();;
+			
+		}
+	}
+
+	private static void printCustomerInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.csy.carApp.carAppMain&apos; to &apos;CarAppMain&apos;&#x0D;&#x0A;- Original project: &apos;class0119_2&apos;&#x0D;&#x0A;- Original element: &apos;com.csy.carApp.carAppMain&apos;&#x0D;&#x0A;- Renamed element: &apos;com.csy.carApp.CarAppMain&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;carAppMain&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.csy.carApp{carAppMain.java[carAppMain" matchStrategy="1" name="CarAppMain" qualified="false" references="true" similarDeclarations="false" stamp="1611021069687" textual="false" version="1.0"/>
+</session>
